@@ -1,0 +1,59 @@
+/*******COMMON************/
+
+@import url('reset.css');
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	min-width: 320px;
+	background: #fff;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1;
+
+}
+
+header, main, footer{
+	display: block;
+	width: 100%;
+	position: relative;
+
+}
+h2{
+	font-size:1.4rem;
+	font-weight:bold;
+	color:#58a;
+}
+
+.wrapper{
+	width: 80%;
+	margin-left: 20%;
+	position: relative;
+	
+}
+.clearfix:after{
+	content:'';
+	display: table;
+	clear:both;
+}
+.img_auto{
+	width:auto;
+	height:auto;
+	max-width:100%;
+	max-height:100%;
+	margin: auto;
+}
+
+.border_round{
+	border-radius:5px;
+}
+
+.active_page{
+	color:rgb(255,255,255);
+}
+.hidden{
+	display:none;
+}

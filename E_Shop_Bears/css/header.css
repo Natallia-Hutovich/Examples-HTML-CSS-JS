@@ -1,0 +1,84 @@
+/*********HEADER*****************************/
+.header_top{
+	min-height: 80px;
+	position: relative;
+	width:80%;
+	margin:0 10% 0;
+	padding:10px 0;
+	line-height: 1.2;
+	color:rgb(85, 50, 85);
+	font-size:1.2rem;
+}
+	.header_name{
+		min-height:80px;
+		margin: 0 0 0 5px;
+		text-align:center;
+		background:url(../img/bg/main_bg1.png) left center no-repeat,url(../img/bg/main_bg2.png) right center no-repeat;
+		padding:0 80px 0;
+		position:relative;
+		display:flex;
+		
+	}
+		.header_name h1{
+			font-size:2.2em;
+			font-style:italic;
+			font-weight:bold;
+			margin:auto;		
+		}
+	.header_information{
+		padding:10px;
+		line-height: 1.4;
+		text-align:center;
+		display:flex;
+		flex-flow:row wrap;
+		justify-content:space-around;
+		align-items:center;
+	}	
+	.header_contacts{
+		margin: 0 15px 0;
+	}
+		.header_contacts span{
+			font-weight:bold;
+		}
+		
+	.header_shop{
+	}
+		.header_shop span{
+			font-weight:bold;
+			color:rgb(188,49,131);
+		}
+	#btn_shop{
+		width:180px;
+		height:30px;
+		outline:none;
+		border-radius: 10px;
+		background: #58a;
+		color: #fff;
+		font-size:1rem;
+		border: none;
+		border-bottom:2px #184563 solid;
+		margin:10px;
+		
+	}	
+	#btn_shop:hover{
+			font-weight:bold;
+			background-color:#184563;
+		}	
+	nav{
+		background: grey;
+		position: relative;
+		overflow: hidden;
+	}
+		nav	a{
+			display: block;
+			float: left;
+			height: 20px;
+			margin: 10px 20px;
+			text-decoration: none;
+			color: rgb(210,210,210);
+			text-transform: uppercase;
+			font-size: 1.5rem;
+			font-weight:bold;
+		}
+		
+		
