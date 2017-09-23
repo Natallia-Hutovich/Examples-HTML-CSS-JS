@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="css/common.css">
 		<link rel="stylesheet" href="css/header.css">
 		<link rel="stylesheet" href="css/style.css">
+		<script src="<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+		<script type="text/javascript" src="script/script_common.js"></script>
 		<script type="text/javascript" src="script/script_contacts.js"></script>
 	</head>
 	<body>
@@ -55,20 +57,23 @@
 			<p>
 			<span>Реквизиты:</span> ЧТУП "Медвежонок", УНП *********, р/с 1111111111111, ОАО Банк БелВЭБ, БИК 153001226, г. Минск, ул. Мясникова, 32.
 			</p>
-			<p>
-			<span>Напишите нам что-нибудь хорошее, и мы обязательно свяжемся с вами:</span>
-			<form>
+			
+			<h2>Напишите нам что-нибудь хорошее, и мы обязательно свяжемся с вами:</h2>
+			<form name='contacts_form' class='contacts_form'>
 				<p>
-					<label>Ваше имя:<input type='text' name='name'></label>
+					<label>Ваше имя:</label><input type='text' name='name'>
 				</p>
 				<p>
-					<label>E-mail:<input type='email' name='email'></label>
+					<label>E-mail:</label><input type='email' name='email'>
 				</p>
 				<p>
-					<label>Сообщение:<textarea name='message'></textarea></label>
-					
+					<label>Сообщение:</label><textarea name='message'></textarea>
+				</p>
+				<p>
+				<button type='submit'>Отправить</button>
+				</p>	
 			</form>
-			</p>
+			
 			<div class='good-by'>
 				<div>До свидания!</div>
 				<div></div>
