@@ -1,59 +1,21 @@
-﻿window.onload = function() {
-	
-	function render_cart(cartId,arr){
-		var cart_count=document.getElementById(cartId+'_count');	
-		var cart_sum=document.getElementById(cartId+'_sum');	
-		var count=0;
-		var sum=0;
-		arr.forEach(function(item){
-			count+=item.count;
-			sum+=item.price;
-		});
-		cart_count.innerText=count;
-		cart_sum.innerText=sum;
-	}
-	
-	function get_cart(){
-		var arr=[];
-		if (localStorage.getItem(LOCAL_VALUE)){
-			arr=JSON.parse(localStorage.getItem(LOCAL_VALUE));
+﻿
+function handler_submit(e){
+	var checked=true;
+	var fields=e.target.querySelectorAll('input, textarea');
+	for(var i=0;i<fields.length;i++){
+		fields[i].classList.remove('wrong');
+		if (fields[i].value==''){
+			fields[i].classList.add('wrong');
+			checked=false;
 		}
-		return arr;
 	}
-	 
-	function set_cart(cartId,newElem){
-		var arr=get_cart();
-		var inArr=false;
-		arr.forEach(function(item){
-			if(item.id===newElem.id){
-				item.count+=newElem.count;
-				item.price+=newElem.price;
-				inArr=true;
-			}	
-		});
-		if (!inArr){arr.push(newElem);}
-		localStorage.setItem(LOCAL_VALUE, JSON.stringify(arr));
-		render_cart(cartId,arr);
-	} 
-	 
-	
-	
-	 
-	function hadler_cart(){
-		var arr=get_cart();
-		render_cart(CART,arr);
-	}	
-		
-	
-	
-	
-	
-		
-		var LOCAL_VALUE='bears_card';	
-		var CART='cart';
-		
-		
-		
-		
-		hadler_cart();
+	if (!checked){
+		e.preventDefault();
+	}
+}
+
+window.onload = function() {
+	var form=document.forms['contacts_form'];
+	form.addEventListener('submit',handler_submit);
+	hadler_cart();
   };

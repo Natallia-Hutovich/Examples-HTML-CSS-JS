@@ -19,54 +19,20 @@ function render_table(arr,table){
 		})
 		temp=table.querySelectorAll('.card_name');
 		var maxHeight=0;
-		temp.forEach(function(item){
-			var height=parseFloat(getComputedStyle(item).height);
+		
+		for(var i=0;i<temp.length;i++){
+			var height=parseFloat(getComputedStyle(temp[i]).height);
 			if(height>maxHeight){
 				maxHeight=height;
 			}	
-		});
-		temp.forEach(function(item){
-			item.style.height=maxHeight+'px';
-		});	
+		}	
+		for(var i=0;i<temp.length;i++){
+			temp[i].style.height=maxHeight+'px';
+		}	
 	}
 	 
 	
-	function render_cart(cartId,arr){
-		var cart_count=document.getElementById(cartId+'_count');	
-		var cart_sum=document.getElementById(cartId+'_sum');	
-		var count=0;
-		var sum=0;
-		arr.forEach(function(item){
-			count+=item.count;
-			sum+=item.price;
-		});
-		cart_count.innerText=count;
-		cart_sum.innerText=sum;
-	}
-	
-	function get_cart(){
-		var arr=[];
-		if (localStorage.getItem(LOCAL_VALUE)){
-			arr=JSON.parse(localStorage.getItem(LOCAL_VALUE));
-		}
-		return arr;
-	}
-	 
-	function set_cart(cartId,newElem){
-		var arr=get_cart();
-		var inArr=false;
-		arr.forEach(function(item){
-			if(item.id===newElem.id){
-				item.count+=newElem.count;
-				item.price+=newElem.price;
-				inArr=true;
-			}	
-		});
-		if (!inArr){arr.push(newElem);}
-		localStorage.setItem(LOCAL_VALUE, JSON.stringify(arr));
-		render_cart(cartId,arr);
-	} 
-	 
+		 
 	 function handler_table(e){
 		 var target=e.target;
 		 var parent;
@@ -94,13 +60,10 @@ function render_table(arr,table){
 			}
 		}
 		 xhr.send();
+		// render_table(big_arr,table);
 	 }
 	 
-	function hadler_cart(){
-		var arr=get_cart();
-		render_cart(CART,arr);
-	}	
-		
+	
 	function filter_category(date,attribute,category){
 			
 		if (category==='all'){
@@ -165,8 +128,6 @@ function render_table(arr,table){
 	
 		var FILE='products.json?noCache='+(new Date().getTime());
 		//var FILE='products.json';
-		var LOCAL_VALUE='bears_card';	
-		var CART='cart';
 		var table=document.getElementById('products_card');
 		var menu_size=document.getElementById('menu_size');
 		var aside=document.querySelector('aside');
