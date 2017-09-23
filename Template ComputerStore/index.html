@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Computer Store</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="libs/jquery/jquery-2.1.4.min.js"></script>
+		<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/style.min.css">
+		<link rel="stylesheet" href="css/media.min.css">
+		
+	</head>
+	<body>
+	<!--HEADER-->
+		<header>
+			<div class="container-fluid">
+	<!--TOP PART-->			
+				<div class="row">
+		<!--BRAND-->
+					<div class="col-md-4 col-sm-4 col-xs-12 brand center_flex">
+						<div class='brand_block'>
+							<img src="img/C.png" alt="">
+							<h1>omputer<span>STORE</span></h1>
+						</div>	
+					</div>	<!--brand-->
+		<!--HEADER TOP-->		
+					<div class="col-md-8 col-sm-8 col-xs-12 header_top">
+						<div class="col-md-4 col-sm-4 col-xs-4 cart">
+							<p>Shopping Cart:</p>
+							<p><span id='Cart_items'>0</span> items</p>
+						</div><!--cart-->
+						<div class="col-md-4 col-sm-4 col-xs-4 lang">
+							<p>Choose your language:</p>
+							<button id='lang_en'></button>
+							<button id='lang_ger'></button>
+							<button id='lang_tc'></button>
+						</div><!--lang-->
+						<div class="col-md-4 col-sm-4 col-xs-4 currencies">
+							<p>Currencies</p>
+							<select class="currencies_select">
+								<option>US Dollar</option>
+								<option>EU EUR</option>
+								<option>CHY China</option>
+							</select>
+						</div><!--currencies-->
+					</div><!--header_top-->
+				</div><!--row TOP PART-->
+	<!--BOTTOM PART-->					
+				<div class="row">
+		<!--HEADER MENU-->				
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<ul class="nav header_menu">
+							<li><a href="#">Home Page</a></li>
+							<li><a href="#">New Products</a></li>
+							<li><a href="#">Specials</a></li>
+							<li><a href="#">My Account</a></li>
+							<li><a href="#">Contact us</a></li>
+						</ul>
+					</div>
+		<!--HEADER BOTTOM-->					
+					<div class="col-md-8 col-sm-8 col-xs-12 header_bottom clearfix">
+						<div class="hidden-xs header_bottom_img"></div>
+						<div class="header_bottom_block">
+							<div class="header_bottom_text">
+								<h1>Cheap <span>&amp;</span> Reliable</h1>
+								<h2>COMPUTERS &amp; ACCESSORIES</h2>
+							</div>	<!--header_bottom_text-->
+					<!--header bottom banner-->		
+							<div class="header_bottom_banner banner">
+								<div class='banner_text'>
+									<h2>Special edition <a href='#'>WEB CAMERAS</a> with an incredible price!</h2>
+								</div> 
+								<img src="img/arrow_black.png" alt="" class="img-responsive banner_right_img">
+								<img src="img/arrow_red.png" alt="" class="img-responsive banner_left_img">
+							</div><!--header_bottom_banner-->
+						</div>	<!--header_bottom_block-->
+					</div><!--header_bottom-->
+				</div><!--row BOTTOM PART-->
+   			</div><!--container-->
+		</header>
+		
+		 <main>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-xs-12 pd0">
+					<!--ASIDE MENU-->
+						<aside>
+							<nav class="navbar bd0">
+								<div class="navbar-header aside_header">
+									BROWSE BY CATEGORY
+									<div type="button" class="navbar-toggle collapsed aside_menu_btn" data-toggle="collapse" data-target="#aside_menu">
+										<div></div>
+									</div>
+								</div>
+								<div class="collapse navbar-collapse" id="aside_menu">
+									<ul class='nav'>
+										<li><a href="#">Barebones</a></li>
+										<li><a href="#">CD / DVD Drives & Media</a></li>
+										<li><a href="#">Digita</a></li>
+										<li><a href="#">Home Electronics</a></li>
+										<li><a href="#">Input Devices</a></li>
+										<li><a href="#">Memory & Flash Memory</a></li>
+										<li><a href="#">Monitors & Projectors</a></li>
+										<li><a href="#">MotherBoard</a></li>
+										<li><a href="#">PDAs / Handheld PCs</a></li>
+										<li><a href="#">TV</a></li>
+										<li><a href="#">PC Desktops</a></li>
+										<li><a href="#">Mac Desktops</a></li>
+										<li><a href="#">Monitors</a></li>
+										<li><a href="#">PC Laptops</a></li>
+										<li><a href="#">Mac Laptops</a></li>
+										<li><a href="#">Tablet PCs</a></li>
+										<li><a href="#">Mice and Trackballs</a></li>
+										<li><a href="#">PDAs</a></li>
+										<li><a href="#">Printers</a></li>
+										<li><a href="#">Scanners</a></li>
+									</ul>
+								</div><!--aside_menu-->
+							</nav><!--navbar-->
+							<div class="guarantee hidden-xs">
+								<img src="img/guarantee_bg.png" alt="" class="img-responsive center-block">
+							</div>
+						</aside>
+					</div>	
+			<!--Main Part-->
+					<div class="col-md-8 col-sm-8 col-xs-12 main_part pd0">
+					<!--FEATURED PRODUCTS-->
+						
+						<div class="featured">
+							<h2>FEATURED PRODUCTS</h2>
+							<div class="container-fluid">
+								<div class='row row_flex'>
+									<div class="col-md-6 col-sm-6 col-xs-12">
+										<div class="product_item column_flex">
+											<div class="product_item_top_block">
+												<img src="img/img1.png" alt="" class="img-responsive">
+												<div class="product_item_text">
+													<div class='product_name'>BENQ - FP231W LCD Monitor</div>
+													<div class='product_price'>$997</div>
+												</div>
+											</div>
+											<div class="product_item_bottom_block">
+												<button id='b111' class="btn btn_details">DETAILS</button>
+												<button id='b222' class="btn btn_tocart">ADD TO CART</button>
+											</div>
+										</div><!--product_item-->
+									</div>
+									<div class="col-md-6 col-sm-6 col-xs-12">
+										<div class="product_item column_flex">
+											<div class="product_item_top_block">
+												<img src="img/img2.png" alt="" class="img-responsive">
+												<div class="product_item_text">
+													<div class='product_name'>APPLE - 1.5 Ghz PowerBook</div>
+													<div class='product_price'>$1799</div>
+												</div>
+											</div>
+											<div class="product_item_bottom_block">
+												<button class="btn btn_details">DETAILS</button>
+												<button class="btn btn_tocart">ADD TO CART</button>
+											</div>
+										</div><!--product_item-->
+									</div>
+								</div>	
+							</div>
+							<div class="container-fluid">
+								<div class="row row_flex">
+									<div class="col-md-6 col-sm-6 col-xs-12">
+										<div class="product_item column_flex">
+											<div class="product_item_top_block">
+												<img src="img/img3.png" alt="" class="img-responsive">
+												<div class="product_item_text">
+													<div class='product_name'>CANON - IP4200 Pixma</div>
+													<div class='product_price'>$109</div>
+												</div>
+											</div>
+											<div class="product_item_bottom_block">
+												<button class="btn btn_details">DETAILS</button>
+												<button class="btn btn_tocart">ADD TO CART</button>
+											</div>
+										</div><!--product_item-->
+									</div>
+									<div class="col-md-6 col-sm-6 col-xs-12">
+										<div class="product_item column_flex">
+											<div class="product_item_top_block">
+												<img src="img/img4.png" alt="" class="img-responsive">
+												<div class="product_item_text">
+													<div class='product_name'>NEC - VT670K Video Projector</div>
+													<div class='product_price'>$1599</div>
+												</div>
+											</div>
+											<div class="product_item_bottom_block">
+												<button class="btn btn_details">DETAILS</button>
+												<button class="btn btn_tocart">ADD TO CART</button>
+											</div>
+										</div><!--product_item-->
+									</div>
+								</div>	
+							</div>	
+							
+							<div class="container-fluid">	
+								<div class="row row_flex">
+									<div class="col-md-6 col-sm-6 col-xs-12">
+										<div class="product_item product_new clearfix">
+											<img src="img/img6.png" alt="" class="img-responsive">
+											<div class='product_item_wrapper column_flex'>
+												<div>
+													<img src="img/new.png" alt="" class="img-responsive">	
+													<h3>I RIVER U10</h3>
+													<p>MP3 & VIDEO</p>
+												</div>	
+												<button class="btn btn_details">DETAILS</button>
+											</div>
+										</div><!--product_item-->
+									</div>
+									<div class="col-md-6 col-sm-6 col-xs-12">
+										<div class="product_item product_sale clearfix">
+											<img src="img/img5.png" alt="" class="img-responsive">
+											<div class="product_item_wrapper column_flex">
+												<div>
+													<img src="img/sale.png" alt="" class="img-responsive">
+													<h3>LOGITECH - Z-5500</h3>
+													<p>DIGITAL AUDIO</p>
+												</div>	
+												<button class="btn btn_details">DETAILS</button>
+											</div>	
+										</div><!--product_item-->
+									</div>
+								</div>	
+							</div>	
+						</div><!--featured-->
+			<!--GUARANTEE-->			
+						<div class="visible-xs col-xs-12">
+							<img src="img/guarantee_bg.png" alt="" class="img-responsive center-block">
+						</div>
+					</div><!--main_part-->
+				</div><!--row-->
+			</div><!--container-->			
+						
+		</main>	
+		
+		<!--FOOTER-->
+		<footer>
+			<div class="container-fluid">
+				<div class="row">
+		<!--CARDS-->		
+					<div class="col-md-4 col-sm-4 col-xs-12 cards center_flex">
+						<img class="img-responsive" src="img/cards.png" alt="">
+					</div>
+		<!--footer_menu-->				
+					<div class="col-md-8 col-sm-8 col-xs-12 footer_menu center_flex">
+						<div class="footer_menu_block">
+							 <ul class="nav">
+								<li><a href="#">Specials</a></li>
+								<li><a href="#">Site Search</a></li>
+								<li><a href="#">Contact Us</a></li>
+								<li><a href="#">Create an Account</a></li>
+								<li><a href="#">Customer Login</a></li>
+							 </ul>
+							 <div class="copyright">
+								Copyright © Your Company Name
+							 </div>
+						</div> <!--footer_menu_block-->
+					</div><!--footer_menu-->
+				</div><!--row-->
+			</div><!--container-->			
+		</footer>
+	</body>
+</html>
