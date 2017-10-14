@@ -20,3 +20,14 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Calibri';
+  src: url('fonts/Calibri.eot');
+  src: url('fonts/Calibri.woff2') format('woff2'),
+       url('fonts/Calibri.woff') format('woff'),
+       url('fonts/Calibri.ttf') format('truetype'),
+       url('fonts/Calibri.svg#Calibri') format('svg'),
+       url('fonts/Calibri.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
