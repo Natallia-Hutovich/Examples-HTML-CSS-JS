@@ -1,25 +1,36 @@
   
  var soundManager={
+	 soundOn:true,
 	 repeat:function(name){
-		audioCache[name].addEventListener('ended', ()=>{
-			this.play(name);
-		});	
+		if(this.soundOn){
+			audioCache[name].addEventListener('ended', ()=>{
+				this.play(name);
+			});		
+		}
 	 },
 	 play:function(name){
-		audioCache[name].play(); 
+		if(this.soundOn){
+			audioCache[name].play(); 
+		}	
 	 },
 	 pause:function(name){
-		 audioCache[name].pause(); 
+		if(this.soundOn){
+			audioCache[name].pause(); 
+		}	
 	 },
 	 stop:function(name){
-		 let sound=audioCache[name];
-		 sound.pause(); 
-		 sound.currentTime = 0;
+		if(this.soundOn){
+			 let sound=audioCache[name];
+			 sound.pause(); 
+			 sound.currentTime = 0;
+		}	 
 	 },
 	 stopAll:function(){
-		 for(let key in audioCache){
-			 this.stop(key);
-		 }
+		if(this.soundOn){	
+			for(let key in audioCache){
+				 this.stop(key);
+			}
+		}	
 	 }
  }
 

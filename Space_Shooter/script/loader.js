@@ -23,6 +23,9 @@
 			aud.onloadeddata = function() {
 				audioCache[key]=aud;
 			}
+			aud.onerror=function(){
+				audioCache[key]='error';
+			}
 			audioCache[key]=false;
 			aud.src=src;
 		}
@@ -30,6 +33,7 @@
 	
 	function isLoaded(){
 		var loaded=true;
+		var isAudioError=false;
 		for(var k in imagesCache){
 			if(!imagesCache[k]) {
 				loaded = false;
@@ -39,12 +43,21 @@
 			if(!audioCache[k]) {
 				loaded = false;
 			}
+			else if(audioCache[k]=='error'){
+				isAudioError=true;
+			}
 		}
 		if(loaded){
 			clearInterval(loadInterval);
 			startBtn.style.opacity=1;
 			gameScreen.style.visibility='visible';
 			finishScreen.style.visibility='visible';
+			if(isAudioError){
+				soundManager.soundOn=false;	
+			}
+			else{
+				soundManager.soundOn=true;
+			}
 		}
 	}
 	

@@ -21,3 +21,10 @@ function calculateAng(obj, box){
 	}
 	return res;
 }		
+
+function randomInt(min,max){
+	return Math.floor(min + Math.random() * max);
+}
+
+
+

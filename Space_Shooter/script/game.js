@@ -5,92 +5,35 @@
 		isGameOver:false,
 		score:0,
 		keyPressed:0,
-		sceneTime:0,
+		gameScene:0,
 		resetGame:function(){
 			this.gameTime=0;
 			this.lastTime=Date.now();
 			this.isGameOver=false;
 			this.score=0;
-			enemies=[];
+			this.gameScene=0;
 			entities=[];
-			asteroids=[];
 			soundManager.stopAll();
+			sceneManager.resetScenes();
 		},
 		initGame:function(){
 			createGameArea(gameField);
 			player=createPlayer();
 			screenManager.showScore(this.score);
 			screenManager.showRockets(player.rockets);
-			enemies=createEnemies(1,4);
-			for(let i=0;i<enemies.length;i++){
-					enemies[i].x=mainArea.canvas.width-5;
-					enemies[i].y=mainArea.canvas.height/2+(enemies[i].height+10)*(i-2);
-					enemies[i].angle=180;
-					enemies[i].updatePath();
-				}
-			entities=entities.concat(enemies);
-			asteroids=[];
-			asteroids=createAsteroids(90,gameManager.gameTime);
-			entities=entities.concat(asteroids);
 			soundManager.repeat('bgSound');
 			soundManager.play('bgSound');			
 		},
 		updateGame:function(){
+			if( !entities.length && sceneManager.isFinishScene(this.gameScene) ){
+				this.stopGame('win');
+				return;
+			}
 			var currentTime=Math.round(this.gameTime*100)/100;
-			enemies=[];
-			asteroids=[];
-			
-			if(this.gameTime==0){
-							
+			if(sceneManager.checkScene(this.gameScene,currentTime,mainArea)){
+				this.gameScene++;	
 			}
-			else if (currentTime==10.00){
-				enemies=[];
-				let count=3;
-				for(let i=0;i<count;i++){
-					enemies=createEnemies(2,count);
-				}
-				for(let i=0;i<enemies.length;i++){
-					enemies[i].x=mainArea.canvas.width-5;
-					enemies[i].y=mainArea.canvas.height/2+100*(i-2);
-					enemies[i].angle=180;
-					enemies[i].updatePath();
-				}
-				entities=entities.concat(enemies);
-			}
-			else if(currentTime==20.00){
-				enemies=[];
-				let count=2;
-				for(let i=0;i<count;i++){
-					enemies=createEnemies(3,count);
-				}
-				for(let i=0;i<enemies.length;i++){
-					enemies[i].x=mainArea.canvas.width-5;
-					enemies[i].y=mainArea.canvas.height/2+150*(2*i-1);
-					enemies[i].angle=180;
-					enemies[i].updatePath();
-				}
-				entities=entities.concat(enemies);
-			}
-			else if(currentTime==30.00){
-				enemies=[];
-				let count=1;
-				for(let i=0;i<count;i++){
-					enemies=createEnemies(4,count);
-				}
-				for(let i=0;i<enemies.length;i++){
-					enemies[i].x=mainArea.canvas.width-5;
-					enemies[i].y=mainArea.canvas.height/2-100;
-					enemies[i].angle=180;
-					enemies[i].updatePath();
-				}
-				entities=entities.concat(enemies);
-			}
-			else if( (currentTime==15.00) || (currentTime==30.00) || (currentTime==45.00) || (currentTime==60.00) ) {
-				asteroids=[];
-				asteroids=createAsteroids(90,currentTime);
-				entities=entities.concat(asteroids);
-			}
-			this.sceneTime=this.gameTime;
+			sceneManager.checkRandomScene(currentTime,mainArea);
 			
 		},
 		renderGame:function(){
@@ -215,9 +158,11 @@
 				}
 			}
 			if(gameManager.keyPressed=='fire'){
-				rocket=createRocket(player);
-				entities.push(rocket);
-				screenManager.showRockets(player.rockets);
+				if(player.rockets>0){
+					rocket=createRocket(player);
+					entities.push(rocket);
+					screenManager.showRockets(player.rockets);
+				}
 			}
 		}
 		gameManager.keyPressed=false;

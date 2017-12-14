@@ -54,20 +54,14 @@ const rocketSprite={
 };
 const asteroidSprite={
 	img:'img/asteroids.png',
-	info:[{
-		type:1,
-		x:0,
-		y:0,
-		width:400,
-		height:300
-	},
-	{	type:2,
+	info:[
+	{	type:1,
 		x:0,
 		y:600,
 		width:400,
 		height:300
 	},
-	{	type:3,
+	{	type:2,
 		x:0,
 		y:1200,
 		width:400,

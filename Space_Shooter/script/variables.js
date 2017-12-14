@@ -1,4 +1,4 @@
-	var imagesCache=[], audioCache=[], mainArea, bgArea, enemies=[], entities=[], asteroids=[], explosions=[], player, rocket;
+	var imagesCache=[], audioCache=[], mainArea, bgArea, entities=[], explosions=[], player, rocket;
 
 	var greetingScreen=document.getElementById('greetingScreen');
 	var gameScreen=document.getElementById('gameScreen');

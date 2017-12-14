@@ -48,6 +48,7 @@ const ROCKET_SETTINGS={
 };
 
 const ASTEROID_SETTINGS={
+	types:2,
 	width:100,
 	height:75,
 	speed:300
@@ -80,4 +81,61 @@ const SOUNDS_SETTINGS={
 	win:'sounds/fanfare.mp3'
 };
 
+var gameScenes=[
+{
+	time:0,
+	enemy_type:1,
+	done:false
+},
+{
+	time:10.00,
+	enemy_type:2,
+	done:false
+},
+{
+	time:20.00,
+	enemy_type:1,
+	done:false
+},
+{
+	time:30.00,
+	enemy_type:3,
+	done:false
+},
+{
+	time:40.00,
+	enemy_type:1,
+	done:false
+},
+{
+	time:50.00,
+	enemy_type:4,
+	done:false
+},
+{
+	time:60.00,
+	enemy_type:2,
+	done:false
+},
+{
+	time:70.00,
+	enemy_type:3,
+	done:false
+},
+{
+	time:80.00,
+	enemy_type:4,
+	done:false
+},
+{
+	time:90.00,
+	enemy_type:3,
+	done:false
+},
+{
+	time:100.00,
+	enemy_type:4,
+	done:false
+}
+];
 

@@ -45,29 +45,8 @@
 	}
 	
 		
-	function createAsteroids(direction, time){
-		var asteroids=[];
-		var type=Math.floor(1 + Math.random() * 3);
-		switch (direction){
-			case 0:{
-				var xStart=0;
-				var yStart=100+Math.random()*(mainArea.canvas.height-100);
-				break;
-			}
-			case 90:{
-				var xStart=100+Math.random()*(mainArea.canvas.width-100);
-				var yStart=0;
-				break;
-			}
-		}
-		var ang=direction;
-		var name='asteroid'+'_'+time;
-		var asteroid=new Asteroid(0, 0, name, ASTEROID_SETTINGS, type, ang);
-		asteroid.x=xStart;
-		asteroid.y=yStart;
-		asteroid.updatePath();
-		asteroids.push(asteroid);
-		return asteroids;
+	function createAsteroids(type, name){
+		return new Asteroid(0, 0, name, ASTEROID_SETTINGS, type, 0);
 	}
 	
 	
