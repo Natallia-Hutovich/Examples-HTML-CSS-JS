@@ -1,0 +1,64 @@
+	var loadInterval;
+	
+	function loadImg(src,key){
+		if(imagesCache[key]){
+			return imagesCache[key];
+		}
+		else{
+			var img = new Image();
+			img.onload = function() {
+				imagesCache[key]=img;
+			}
+			imagesCache[key]=false;
+			img.src=src;
+		}
+	}
+	
+	function loadAudio(src,key){
+		if(audioCache[key]){
+			return audioCache[key];
+		}
+		else{
+			var aud = new Audio();
+			aud.onloadeddata = function() {
+				audioCache[key]=aud;
+			}
+			audioCache[key]=false;
+			aud.src=src;
+		}
+	}
+	
+	function isLoaded(){
+		var loaded=true;
+		for(var k in imagesCache){
+			if(!imagesCache[k]) {
+				loaded = false;
+			}
+		}
+		for(var k in audioCache){
+			if(!audioCache[k]) {
+				loaded = false;
+			}
+		}
+		if(loaded){
+			clearInterval(loadInterval);
+			startBtn.style.opacity=1;
+			gameScreen.style.visibility='visible';
+			finishScreen.style.visibility='visible';
+		}
+	}
+	
+	window.onload=function(){
+		for(var k in sprites){
+			loadImg(sprites[k].img,k);
+		}
+		for(var k in SOUNDS_SETTINGS){
+			loadAudio(SOUNDS_SETTINGS[k],k);
+		}
+		loadInterval=setInterval(isLoaded,100);
+		screenManager.setActive(greetingScreen);
+		
+	}
+	
+	/******************************/
+	

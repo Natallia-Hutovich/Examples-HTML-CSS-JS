@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Space Shooter</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		
+	</head>
+	<body>
+		<div class='wrapper'>
+			<div class='greeting' id='greetingScreen'>
+				<div>
+					<p>A long time ago in a galaxy far, far away...</p>
+				</div>	
+				<button id='startGame'>Start Game</button>
+			</div>
+			<div class='game' id='gameScreen'>
+				<div class='statusBar'>
+					<button id='restartGame'>Start New Game</button>
+					<div class='score'>Score:<span id='statusScore'>0</span></div>
+					<div class='rockets'>Rockets:<span id='statusRockets'>50</span></div>
+					<button id='pauseGame'>Pause</button>
+					<button id='continueGame'>Continue</button>
+				</div>
+				<div class='main'>
+					<div class='controlBar' id='controlBtns'>
+						<button data-btn='up'>Up</button>
+						<button data-btn='down'>Down</button>
+						<button data-btn='left'>Left</button>
+						<button data-btn='right'>Right</button>
+						<button data-btn='move'>Move</button>
+						<button data-btn='stop'>Stop</button>
+						<button data-btn='fire'>Fire</button>
+					</div>
+					<div class='field' id='gameField'>
+						<canvas class='mainArea' id='canva1'></canvas>  
+						<canvas class='bgArea'id='canva2'></canvas>
+					</div>	
+				</div>
+			</div>	<!--game-->
+			<div class='finish' id='finishScreen'>
+				<div id='win'>
+					<p>Congratulations!! You did it!!</p>
+				</div>
+				<div id='lose'>
+					<p>Ups</p>
+					<p>Next time you'll do it better</p>
+				</div>
+			</div>
+		</div>	
+		<script type="text/javascript" src="script/variables.js"></script>
+		<script type="text/javascript" src="script/screenManager.js"></script>
+		<script type="text/javascript" src="script/inputManager.js"></script>
+		<script type="text/javascript" src="script/classes.js"></script>
+		<script type="text/javascript" src="script/atlas.js"></script>	
+		<script type="text/javascript" src="script/settings.js"></script>	
+		<script type="text/javascript" src="script/physic.js"></script>		
+		<script type="text/javascript" src="script/createFunctions.js"></script>
+		<script type="text/javascript" src="script/checkFunctions.js"></script>
+		<script type="text/javascript" src="script/spriteManager.js"></script>	
+		<script type="text/javascript" src="script/game.js"></script>	
+		<script type="text/javascript" src="script/soundManager.js"></script>	
+		<script type="text/javascript" src="script/loader.js"></script>	
+	</body>
+</html>
