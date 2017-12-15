@@ -51,9 +51,12 @@
 				isAudioError=true;
 			}
 		}
-		if(loaded){
+		if(loaded){ 
 			clearInterval(loadInterval);
+			startBtn.style.display='block';
 			startBtn.style.opacity=1;
+			var loading=document.querySelector('.loading');
+			loading.style.display='none';
 			gameScreen.style.visibility='visible';
 			finishScreen.style.visibility='visible';
 			if(isAudioError){
