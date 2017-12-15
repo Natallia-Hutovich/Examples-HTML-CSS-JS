@@ -39,7 +39,7 @@ button:hover{
 	background-color:#000;
 	background:url('../img/greetingBg.png') center 70% no-repeat #000;
 }
-.greeting div{
+.greeting p{
 	width:75%;
 	margin:35px 0;
 	color:#15f6ff;
@@ -47,6 +47,7 @@ button:hover{
 	font-family:Calibri;
 }
 .greeting button{
+	display:none;
 	width:170px;
 	height:70px;
 	margin:30px;
@@ -59,8 +60,12 @@ button:hover{
 	opacity:0;
 	transition:opacity linear 0.8s;
 }
-.greeting button:hover{
-	cursor:pointer;
+.loading{
+	margin:30px;
+	font-size:26px;
+	color:#747d84;
+	font-family:Calibri;
+	font-weight:bold;
 }
 .game{
 	width:100%;
