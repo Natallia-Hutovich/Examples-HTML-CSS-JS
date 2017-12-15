@@ -1,3 +1,4 @@
+//Global variables//
 	var imagesCache=[], audioCache=[], mainArea, bgArea, entities=[], explosions=[], player, rocket;
 
 	var greetingScreen=document.getElementById('greetingScreen');

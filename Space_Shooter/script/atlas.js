@@ -1,4 +1,5 @@
-﻿
+﻿//Atlas of images in sprites//
+
 const enemiesShipSprite={
 img:'img/sprite.png',
 info:[

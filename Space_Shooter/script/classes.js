@@ -126,6 +126,7 @@
 		}	
 	};
 	
+	/**Explosions**/
 	class Explosion{
 		constructor(_x,_y,_settings){
 			this.x=_x;
@@ -140,6 +141,7 @@
 		}
 	};
 	
+	/**Game area **/
 	class gameArea{
 		constructor(_id,_width,_height){
 			this.canvas=document.getElementById(_id);

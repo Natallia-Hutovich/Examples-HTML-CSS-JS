@@ -1,4 +1,6 @@
-﻿var sprites=[];
+﻿//Settings//
+
+var sprites=[];
 sprites['EnemiesShip']=enemiesShipSprite;
 sprites['PlayerShip']=playerShipSprite;
 sprites['Rocket']=rocketSprite;

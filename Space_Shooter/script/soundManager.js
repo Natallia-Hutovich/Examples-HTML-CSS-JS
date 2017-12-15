@@ -1,4 +1,7 @@
-  
+ //Handle sounds in audioCache// 
+ // soundManager.soundOn==true - play with sounds
+ //soundManager.soundOn==false - play without sounds
+ 
  var soundManager={
 	 soundOn:true,
 	 repeat:function(name){

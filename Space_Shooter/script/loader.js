@@ -1,3 +1,7 @@
+	//Loading images and audio files//
+	//After loading make button Start game visible//
+	//If error on loading audio, set soundManager.soundOn=false - play wihout sounds//	
+	
 	var loadInterval;
 	
 	function loadImg(src,key){

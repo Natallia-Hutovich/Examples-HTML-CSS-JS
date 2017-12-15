@@ -1,3 +1,6 @@
+//Handle greeting, game and finish screens//
+//Shows score and rocket's count//
+
 var screenManager={
 	activeScreen:'',
 	setActive:function(screen,result=''){ 

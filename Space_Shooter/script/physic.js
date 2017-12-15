@@ -1,3 +1,5 @@
+//Phisic calculations//
+
 function calculatePath(obj){
 	var speedX=0, speedY=0;
 	var path={

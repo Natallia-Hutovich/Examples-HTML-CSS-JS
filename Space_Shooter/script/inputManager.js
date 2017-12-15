@@ -1,3 +1,5 @@
+//Handle input from keyboard and pressed buttons
+
 function handleInput(e){
 	var code=e.keyCode;
 	var key;
@@ -27,7 +29,7 @@ function handleInput(e){
 }
 
 
-window.addEventListener('keydown', function (e) {
+window.addEventListener('keydown', function (e) { //Handle keypress
 	e.preventDefault();
     gameManager.keyPressed = handleInput(e);
 });
@@ -36,32 +38,32 @@ window.addEventListener('keyup', function (e) {
     gameManager.keyPressed = false;
 });
 
-startBtn.addEventListener('click',function(){
+startBtn.addEventListener('click',function(){	//Start Game
 	screenManager.setActive(gameScreen);
 	gameManager.startGame(); 
 });
 
-restartBtn.addEventListener('click',function(){
+restartBtn.addEventListener('click',function(){	//Restart Game
 	screenManager.setActive(gameScreen);
 	gameManager.startGame(); 
  });
 
- pauseBtn.addEventListener('click',function(){
+ pauseBtn.addEventListener('click',function(){	//Pause Game
 	gameManager.pauseGame(); 
 });
 
-continueBtn.addEventListener('click',function(){
+continueBtn.addEventListener('click',function(){ //Continue Game
 	gameManager.continueGame(); 
 });
 
-controlBtns.addEventListener('mousedown',function(e){
+controlBtns.addEventListener('mousedown',function(e){	//Handle controls buttons
 	if(e.target.tagName=='BUTTON'){
 		e.stopPropagation();
 		gameManager.keyPressed=e.target.dataset.btn;
 	}
 });
 
-controlBtns.addEventListener('mouseup',function(e){
+controlBtns.addEventListener('mouseup',function(e){	
 	gameManager.keyPressed = false;
 });
 		

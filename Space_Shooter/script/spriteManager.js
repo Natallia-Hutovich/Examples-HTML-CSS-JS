@@ -1,4 +1,5 @@
-/*****Sprite Draw****/
+//Sprite Draw on canvas//
+//use imagesCache//
 	var spriteManager={
 		getSprite:function(name){
 			return sprites[name];
