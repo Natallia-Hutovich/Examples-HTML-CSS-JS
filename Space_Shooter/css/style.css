@@ -40,8 +40,8 @@ button:hover{
 	background:url('../img/greetingBg.png') center 70% no-repeat #000;
 }
 .greeting p{
-	width:75%;
-	margin:35px 0;
+	width:76%;
+	margin:35px 12%;
 	color:#15f6ff;
 	font-size:80px;
 	font-family:Calibri;
