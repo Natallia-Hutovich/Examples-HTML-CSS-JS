@@ -25,7 +25,7 @@
 			soundManager.play('bgSound');			
 		},
 		updateGame:function(){
-			if( !entities.length && sceneManager.isFinishScene(this.gameScene) ){
+			if( !entities.length && sceneManager.isFinishScene(this.gameScene) && (player.state!=='kill') ){
 				this.stopGame('win');
 				return;
 			}
@@ -115,6 +115,9 @@
 			}
 			for(let j=0;j<entities.length;j++){
 				if( (i==j) || (entities[j].state=='kill') ){
+					continue;
+				}
+				if(entities[i].name.startsWith('enemy') && entities[j].name.startsWith('enemy')){
 					continue;
 				}
 				if(isCollision(entities[i], entities[j])){

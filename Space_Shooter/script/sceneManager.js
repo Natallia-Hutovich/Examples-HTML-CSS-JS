@@ -28,7 +28,7 @@ var sceneManager={
 	},
 	runScene:function(scene, area){
 		if(scene.enemy_type){
-			setEnemies(scene.enemy_type, area, 15);
+			setEnemies(scene.enemy_type, area, 10);
 			scene.done=true;
 		}
 	}
@@ -47,9 +47,11 @@ function countShips(area, type, shiftY){
 
 function setEnemiesPosition(area,enemies,shiftY){
 	let count=enemies.length;
+	let startX=area.canvas.width;	
 	let startY=(area.canvas.height/2+shiftY/2)-(enemies[0].height+shiftY)*count/2;
+	
 	for(let i=0;i<count;i++){
-		enemies[i].x=area.canvas.width-5;	
+		enemies[i].x=startX;
 		enemies[i].y=startY+(enemies[i].height+shiftY)*i;
 		enemies[i].angle=180;
 		enemies[i].updatePath();

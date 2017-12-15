@@ -11,25 +11,25 @@ const ENEMIES_SHIP_SETTINGS=[
 	type:1,
 	width:82,
 	height:80,
-	speed:100
+	speed:200
 },
 {
 	type:2,
 	width:108,
 	height:96,	
-	speed:150
+	speed:250
 },
 {
 	type:3,
 	width:107,
 	height:147,
-	speed:200
+	speed:300
 },
 {
 	type:4,
 	width:145,
 	height:111,
-	speed:250
+	speed:350
 }
 ];
 
@@ -62,8 +62,10 @@ const EXPLOSION_SETTINGS={
 
 const START_SETTINGS={
 	enemies:{
-		type:1,
-		count:4
+		x:1,	//% from canvas.width
+		y:0.5,	//% from canvas.height
+		shiftX:0,	//px
+		shiftY:10	// px
 	},
 	
 	player:{

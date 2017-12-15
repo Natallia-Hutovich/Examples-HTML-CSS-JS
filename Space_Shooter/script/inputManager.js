@@ -1,19 +1,19 @@
 function handleInput(e){
 	var code=e.keyCode;
 	var key;
-	if((code==37)||(code==65)){ //rotate counterclockwise: left or a
+	if( (code==37) || (code==65) ){ //rotate counterclockwise: left or a
 		key='left';
 	}
-	else if((code==39)||(code==68)){  //rotate clockwise: right or d
+	else if( (code==39)||(code==68) ){  //rotate clockwise: right or d
 		key='right';
 	}
-	else if((code==40)||(code==88)){   //down:   down or x
+	else if( (code==40)||(code==88) ){   //down:   down or x
 		key='down';
 	}
-	else if((code==38)||(code==87)){   //up: up or w
+	else if( (code==38)||(code==87) ){   //up: up or w
 		key='up';
 	}
-	else if((code==32)||(code==90)){  // fire:  space or z
+	else if( (code==32)||(code==90) ){  // fire:  space or z
 		key='fire';
 	}
 	else if(code==83){ //stop/move: s
