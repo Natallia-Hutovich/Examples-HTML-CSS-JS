@@ -15,6 +15,9 @@ canvas{
 	left:0;
 	right:0;
 }
+button:hover{
+	cursor:pointer;
+}
 .wrapper{
 	width:100%;
 	height:100%;
@@ -106,13 +109,14 @@ canvas{
 	flex-grow:1;
 }	
 .controlBar{
-	width:80px;
+	width:81px;
 	padding:5px;
 }
 .controlBar button{
-	width:70px;
+	width:75px;
 	height:60px;
 	margin:2px 0;	
+	padding:2px;
 	font-weight:bold;
 	color:#000;
 }	
