@@ -28,7 +28,7 @@ var sceneManager={
 	},
 	runScene:function(scene, area){
 		if(scene.enemy_type){
-			setEnemies(scene.enemy_type, area, 10);
+			setEnemies(scene.enemy_type, area, 15);
 			scene.done=true;
 		}
 	}
@@ -77,4 +77,6 @@ function setEnemies(type, area, shiftY){
 	entities=entities.concat(enemies);
 }
 
-
+function randomInt(min,max){
+	return Math.floor(min + Math.random() * (max-min));
+}
