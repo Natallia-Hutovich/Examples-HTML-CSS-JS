@@ -38,7 +38,7 @@ const ENEMIES_SHIP_SETTINGS=[
 const PLAYER_SHIP_SETTINGS={
 	width:80,
 	height:80,
-	speed:100,
+	speed:120,
 	shift:3,
 	rotateAngle:4
 };
