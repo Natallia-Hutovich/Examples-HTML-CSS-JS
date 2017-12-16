@@ -40,7 +40,7 @@ const PLAYER_SHIP_SETTINGS={
 	height:80,
 	speed:100,
 	shift:3,
-	rotateAngle:5
+	rotateAngle:4
 };
 
 const ROCKET_SETTINGS={

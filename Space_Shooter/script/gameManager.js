@@ -164,9 +164,10 @@
 					entities.push(rocket);
 					screenManager.showRockets(player.rockets);
 				}
+				gameManager.keyPressed=false;
 			}
 		}
-		gameManager.keyPressed=false;
+		
 		
 		/***Check Player state***/
 		switch(player.state){
