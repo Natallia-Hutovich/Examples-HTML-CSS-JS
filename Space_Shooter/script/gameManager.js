@@ -144,12 +144,6 @@
 			if(gameManager.keyPressed=='down'){
 				player.move('down');
 			}
-			if(gameManager.keyPressed=='stop'){
-				player.state='stop';
-			}
-			if(gameManager.keyPressed=='move'){
-				player.state='move';
-			}
 			if(gameManager.keyPressed=='stop_move'){
 				if (player.state=='move'){
 					player.state='stop';
@@ -157,6 +151,7 @@
 				else if (player.state=='stop'){
 					player.state='move';
 				}
+				gameManager.keyPressed=false;
 			}
 			if(gameManager.keyPressed=='fire'){
 				if(player.rockets>0){
