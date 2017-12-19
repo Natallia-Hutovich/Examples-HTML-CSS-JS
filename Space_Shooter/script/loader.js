@@ -70,7 +70,7 @@
 	
 	window.onload=function(){
 		for(var k in sprites){
-			loadImg(sprites[k].img,k);
+			loadImg(sprites[k].img,sprites[k].img);
 		}
 		for(var k in SOUNDS_SETTINGS){
 			loadAudio(SOUNDS_SETTINGS[k],k);

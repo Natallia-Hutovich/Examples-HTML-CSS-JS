@@ -1,6 +1,6 @@
 //Function Check Element's conflict//
 	function isBounds(obj, box){
-		return ((obj.x<box.left)||(obj.x>box.right)||(obj.y<box.top)||(obj.y>box.bottom))?true:false;
+		return ((obj.x<box.left-obj.width)||(obj.x>box.right+obj.width)||(obj.y<box.top-obj.height)||(obj.y>box.bottom+obj.height))?true:false;
 	}
 	
 	function isCollision(obj1, obj2){

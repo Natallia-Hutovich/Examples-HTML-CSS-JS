@@ -15,7 +15,7 @@
 				return;
 			}
 			var sprite=this.getSprite(name);
-			var image=this.getImage(name);
+			var image=this.getImage(sprite.img);
 			if(Array.isArray(sprite.info)){
 				for(let i=0;i<sprite.info.length;i++){
 					if (sprite.info[i].type==obj.type){
@@ -31,7 +31,8 @@
 		},
 		drawBg:function(area, bgName){
 			var ctx=area.context;
-			var image=this.getImage(bgName);
+			var sprite=this.getSprite(bgName);
+			var image=this.getImage(sprite.img);
 			drawFromPattern(ctx, 0, 0, area.canvas.width, area.canvas.height, image);
 		}
 	};
