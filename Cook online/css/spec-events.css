@@ -1,0 +1,39 @@
+
+/**Special Events***/
+.spec-events{
+	margin: 0 7px 7px 30px;
+	position: relative;
+	z-index: 99;
+}
+.spec-events_head{
+	margin: 0 0 12px;
+	position: relative;
+	font-family: SerifBlack;
+	font-size: 26px;
+	font-style: italic;
+	text-transform: lowercase;
+	letter-spacing: 1px;
+}
+.spec-events_head a{
+	color: #fff;
+}
+.spec-events_text{
+	max-height: 120px;
+	overflow: hidden;
+	font-family: Vernada;
+	font-size: 10px;
+	color:#fff;
+	letter-spacing: 2px;
+	word-spacing: 6px;
+}	
+.spec-events_text span{
+	font-weight: bold;
+	color: #fbf6c1;
+	letter-spacing: 1px;
+	word-spacing: 4px;
+}
+.spec-events_arrow{
+	display: block;
+	margin: 4px 0 0 -1px;
+	background: url('../img/arrow-yellow.png') center center no-repeat;
+}

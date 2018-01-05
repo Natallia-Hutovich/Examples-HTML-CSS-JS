@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'SerifBlack';
+  src: url('fonts/SerifBlack/SerifBlack.eot');
+  src: url('fonts/SerifBlack/SerifBlack.woff') format('woff'),
+       url('fonts/SerifBlack/SerifBlack.woff2') format('woff2'),
+       url('fonts/SerifBlack/SerifBlack.ttf') format('truetype'),
+       url('fonts/SerifBlack/SerifBlack.svg#SerifBlack') format('svg'),
+       url('fonts/SerifBlack/SerifBlack.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Verdana';
+  src: url('fonts/Vernada/Verdana.eot');
+  src: url('fonts/Vernada/Verdana.woff') format('woff'),
+       url('fonts/Vernada/Verdana.ttf') format('truetype'),
+       url('fonts/Vernada/Verdana.svg#Verdana') format('svg'),
+       url('fonts/Vernada/Verdana.woff2') format('woff2'),
+       url('fonts/Vernada/Verdana.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

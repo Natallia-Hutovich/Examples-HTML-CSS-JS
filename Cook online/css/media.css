@@ -1,0 +1,99 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 740px) {
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+	main{
+		width: 100%;
+	}
+	.center-wrapper{
+		width: 100%;
+	}
+	.bon-app{
+		margin: 40px 7px 24px 10px;
+	}
+		.bon-app_head{
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+		}
+			.bon-app_head a{
+				flex-grow: 0;
+				flex-shrink: 0;
+			}	
+			.bon-app_head img{
+				float:none;
+				margin: 0;
+			}	
+	.spec-events{
+		margin: 0 7px 7px 10px;
+	}
+	
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 680px) {
+	main{
+		display: flex;
+		flex-flow: column nowrap;
+		flex-grow:1;
+		width: 400px;
+		margin: 0 auto;
+	}
+	.aside-block_main{
+		padding: 0 10px 0 0;
+	}
+	.bon-app_head img{
+		float:none;
+		margin: 0 0 0 10px;
+	}
+	.aside-block_footer{
+		display: flex;
+		flex-flow: row wrap;
+	}
+		.aside-block_footer p:nth-child(2){
+			margin: 24px 0 0 -36px;
+		}	
+	.draw-footer{
+		width: 80%;
+		height: auto;
+		left:20%;
+		bottom:0;
+	}
+	.main-footer{
+		display: block;
+	}
+	.footer-menu{
+		margin: 10px 5px;
+		justify-content: center;
+	}
+	.cpwr{
+		margin: 5px 5px 0 0;
+		text-align: right;
+	}
+}
+	
+
